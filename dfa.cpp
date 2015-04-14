@@ -15,125 +15,62 @@ char transition(char input){
 
     int i=0;
 
-            cout<<"degerlendirilen state = "<<state;
-            cout<<" input= "<<input<<endl;
+    cout<<"degerlendirilen state = "<<state;
+    cout<<" input= "<<input<<endl;
 
         if (state=='0'){
 
-            if ((input=='w') ) {
-
-                    state ='1';
-                    }
-            else if (input=='e'){
-                    state ='4';
-
-                    }
+            if ((input=='w') ) {state ='1';}
+            else if (input=='e'){state ='4';}
             else{state ='0';}
-                            }
+            }
         else if (state=='1'){
 
-            if ((input=='w') ){
-                state ='1';
-            }
-           else  if ((input=='e') ){
-                state ='2';
-            }
-            else{state ='0';
-                   }}
+           if ((input=='w') ){state ='1';}
+           else  if ((input=='e') ){state ='2';}
+           else{state ='0';}
+             }
         else if (state=='2'){
 
-            if ((input=='w')){
-                state ='1';
+            if ((input=='w')){state ='1';}
+            else if ((input=='e')){state ='4';}
+            else if ((input=='b')){state ='3';}
+            else{state ='0';}
             }
-            else if ((input=='e')){
-                state ='4';
-            }
-            else if ((input=='b')){
-                state ='3';
-            }
-            else{state ='0';
-                   }
-}
         else if (state=='3'){
 
-            if ((input=='w') ){
-                state ='1';
+            if ((input=='w') ){state ='1';}
+            else if ((input=='a') ){state ='6';}
+            else if ((input=='e') ){state ='4';}
+            else{state ='0';}
             }
-            else if ((input=='a') ){
-                state ='6';
-            }
-            else if ((input=='e') ){
-                state ='4';
-            }
-            else{
-                state ='0';
-            }
-}
         else if (state=='4'){
-             if ((input=='b')){
-                    state ='5';
 
+            if ((input=='b')){state ='5';}
+            else if ((input=='w')){state ='1';}
+            else if ((input=='e')){state ='4';}
+            else{state ='0';}
             }
-            else if ((input=='w')){
-                    state ='1';
-
-            }
-            else if ((input=='e')){
-                    state ='4';
-
-            }
-
-                else{state ='0';}
-
-        }
         else if (state=='5'){
 
-            if ((input=='a') ){
-                    state ='6';
-
+           if ((input=='a') ){state ='6';}
+           else if ((input=='e') ){state ='4';}
+           else if ((input=='w') ){state ='1';}
+           else{state ='0';}
             }
-           else if ((input=='e') ){
-                    state ='4';
-
-            }
-           else if ((input=='w') ){
-                    state ='1';
-
-            }
-
-            else{state ='0';
-
-            }
-                                }
         else if (state=='6'){
 
-            if ((input=='e')){
-                state ='4';
+            if ((input=='e')){state ='4';}
+            else if ((input=='w')){state ='1';}
+            else if ((input=='y')){state ='h';}
+            else{state ='0';}
             }
-            else if ((input=='w')){
-                state ='1';
-            }
-            else if ((input=='y')){
-                state ='h';
-            }
-            else{state ='0';
-
-            }
-                                }
         else if (state=='7'){
 
-            if ((input=='e')){
-                state ='4';
+            if ((input=='e')){state ='4';}
+            else if ((input=='w')){state ='1';}
+            else{state ='0';}
             }
-            else if ((input=='w')){
-                state ='1';
-            }
-
-
-            else{state ='0';
-
-            }
-                                }
 
         i++;
 
