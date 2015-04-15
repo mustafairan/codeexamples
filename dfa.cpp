@@ -5,11 +5,18 @@ using namespace std;
 
 class automata{
 
-  char state='0';// baslangic state i atandi
+char state='0';// baslangic state i atandi
 
-  public : int didAccepted(){if ((state=='7') or (state=='3')){cout<<"string kabul edildi"; return 1;}
-    else {cout<<"string kabul edilmedi"; return 0;}
-  }
+public : int didAccepted(){
+    if ((state=='7') or (state=='3')){
+        cout<<"string kabul edildi";
+        return 1;
+    }
+    else {
+        cout<<"string kabul edilmedi";
+        return 0;
+        }
+}
 
 char transition(char input){
 
@@ -79,11 +86,10 @@ return  state;
 }
 public: void send (string str){
     int i=0;
-while (str[i]!=NULL){
-    transition(str[i]);
-i++;
-}
-
+    while (str[i]!=NULL){
+        transition(str[i]);
+        i++;
+    }
 }
 };
 
@@ -97,4 +103,3 @@ int main()
     object.didAccepted();
     return 0;
 }
-
